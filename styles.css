@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+header {
+    background: #333;
+    color: white;
+    padding: 1em 0;
+}
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
+}
+.hero {
+    background: #f4f4f4;
+    padding: 50px;
+}
+.about, .services, .portfolio, .testimonials, .contact {
+    padding: 20px;
+}
+.services {
+    background: #e2e2e2;
+}
+.portfolio {
+    background: #d4d4d4;
+}
+.testimonials {
+    background: #c4c4c4;
+}
+.contact {
+    background: #b4b4b4;
+    padding-bottom: 50px;
+}
+footer {
+    background: #333;
+    color: white;
+    padding: 10px 0;
+    position: relative;
+}
