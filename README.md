@@ -49,12 +49,20 @@ body {
 ```
 
 ### Section Styling Example
+<<<<<<< HEAD
 ```css
+=======
+css
+>>>>>>> c4c871667ad9fa061350eea5e70808bcb0d33c53
 .services {
     background: #e2e2e2;
     padding: 20px;
 }
+<<<<<<< HEAD
 ```
+=======
+
+>>>>>>> c4c871667ad9fa061350eea5e70808bcb0d33c53
 
 ## Recommended Next Steps
 - Implement media queries for full responsiveness
@@ -69,4 +77,8 @@ body {
 - Integrate external resources like icon libraries
 
 ## License
+<<<<<<< HEAD
 © 2025 CSS Workshop Materials. All Rights Reserved.
+=======
+© 2025 CSS Workshop Materials. All Rights Reserved.
+>>>>>>> c4c871667ad9fa061350eea5e70808bcb0d33c53
