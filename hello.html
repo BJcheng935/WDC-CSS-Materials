@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My First HTML </title> <!-- This is the title of the page -->
+</head>
+<link rel="stylesheet" href="style.css">
+<body> <!-- This is the body of the page -->
+    <h1>Welcome to My </h1> <!-- This is an h1 heading -->
+
+    <p>This is a paragraph.</p>
+    <p>This is <b>bold</b> text.</p>
+    <p>This is <i>italic</i> text.</p>
+    <p>This is <u>underlined</u> text.</p>
+    <p>This is <small>small</small> text.</p>
+    <p>This is <mark>highlighted</mark> text.</p>
+    <p>This is <del>deleted</del> and <ins>inserted</ins> text.</p>
+
+    <!-- Headings -->
+<h1>This is Heading 1</h1>
+<h2>This is Heading 2</h2>
+<h3>This is Heading 3</h3>
+<h4>This is Heading 4</h4>
+<h5>This is Heading 5</h5>
+<h6>This is Heading 6</h6>
+
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+
+<a href="https://store.epicgames.com/en-US/">My games</a>
+
+<img src="NFLball.jpg" alt=""><!-- This is an image example implementation -->
+
+<!-- Lists -->
+<ul> 
+    <li>game</li>
+    <li>game 2</li>
+    <li>console </li>
+    <li> console 2</li>
+</ul>
+
+<!-- Nested Lists (list inside a list) -->
+<ul>
+    <li>Fruits 1
+        <ul>
+            <li>Apple</li>
+            <li>Banana</li>
+            <li>Cherry</li>
+        </ul>
+    </li>
+    <li>Vegetables
+        <ul>
+            <li>Carrot</li>
+            <li>Broccoli</li>
+            <li>Potato</li>
+            <li>Spinach</li>
+        </ul>
+    </li>
+</ul>
+
+<style>
+    ul.horizontal {
+        list-style: none;
+        padding: 0;
+    }
+    ul.horizontal li {
+        display: inline;
+        margin-right: 10px;
+    }
+</style>
+
+<ul class="horizontal">
+    <li>Home</li>
+    <li>About</li>
+    <li>Contact</li>
+    <li> interests </li>
+</ul>
+
+
+
+<!-- Ordered Lists -->
+<ol>
+    <li>First item</li>
+    <li>Second item</li>
+    <li>Third item</li>
+    <li>Fourth item</li>
+</ol>
+
+<table>
+    <tr>
+        <th>Header 1</th>
+        <th>Header 2</th>
+    </tr>
+    <tr>
+        <td>Data 1</td>
+        <td>Data 2</td>
+    </tr>
+</table>
+
+<!-- Forms log in and sign up -->
+<form action="/submit" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name"><br><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email"><br><br>
+    <input type="submit" value="Submit">
+</form>
+
+<!-- Forms genders -->
+<form>
+    <p>Choose an option:</p>
+    
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label>
+    
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label>
+    
+    <input type="radio" id="other" name="gender" value="other">
+    <label for="other">Other</label>
+
+    <input type="radio" id="otherone" name="gender" value="none">
+    <label for="otherone">None</label>
+
+    <br><br>
+    <input type="submit" value="Submit">
+</form>
+
+<!-- Forms genders multiple options -->
+<form>
+    <p>Select your interests:</p>
+    
+    <input type="checkbox" id="sports" name="interests" value="sports">
+    <label for="sports">Sports</label>
+
+    <input type="checkbox" id="music" name="interests" value="music">
+    <label for="music">Music</label>
+
+    <input type="checkbox" id="reading" name="interests" value="reading">
+    <label for="reading">Reading</label>
+
+    <br><br>
+    <input type="submit" value="Submit">
+</form>
+
+
+<!-- Forms languages -->
+<form>
+    <p>Select your favorite programming languages:</p>
+    
+    <input type="checkbox" id="html" name="languages" value="HTML">
+    <label for="html">HTML</label>
+
+    <input type="checkbox" id="css" name="languages" value="CSS">
+    <label for="css">CSS</label>
+
+    <input type="checkbox" id="js" name="languages" value="JavaScript">
+    <label for="js">JavaScript</label>
+
+    <br><br>
+    <input type="submit" value="Submit">
+</form>
+
+<!-- Forms countries -->
+<form>
+    <label for="country">Choose your country:</label>
+    <select id="country" name="country">
+        <option value="usa">USA</option>
+        <option value="canada">Canada</option>
+        <option value="uk">UK</option>
+    </select>
+
+    <br><br>
+    <input type="submit" value="Submit">
+</form>
+
+<!-- Forms messages -->
+<form>
+    <label for="message">Your Opinion:</label><br>
+    <textarea id="message" name="message" rows="4" cols="30"></textarea>
+
+    <br><br>
+    <input type="submit" value="Send">
+</form>
+
+<!-- Forms files -->
+<form action="/upload" method="post" enctype="multipart/form-data">
+    <label for="file">Upload a file:</label>
+    <input type="file" id="file" name="file">
+    
+    <br><br>
+    <input type="submit" value="Upload">
+</form>
+
+<!-- Forms email -->
+<form>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email">
+
+    <br><br>
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+</form>
+
+<!-- Forms age -->
+<form>
+    <label for="age">Enter your age (must be between 18-99):</label>
+    <input type="number" id="age" name="age" min="18" max="99" required>
+    
+    <br><br>
+    <input type="submit" value="Submit">
+</form>
+
+
+
+<div style="background-color:lightblue">
+    <h2>This is a heading inside a div</h2>
+    <p>This is a paragraph inside a div.</p>
+</div>
+<span style="color:red">This is a span.</span>
+
+
+<!-- Text colors-->
+<h1 style="color:Tomato;">This is a text color</h1>
+<h2 style="color: blue;">This is another text color</h2>
+<p style="color:DodgerBlue;">This is a paragraph text color</p>
+<p style="color:MediumSeaGreen;">This one too :)</p>
+
+<!-- Backgreound colors-->
+<h1 style="background-color:DodgerBlue;">Text with background-color</h1>
+<p style="background-color:Tomato;">This is a phragraph with background-color</p>
+<h2 style="background-color: darkblue;">This is a heading with background-color;"</h2>  
+
+<!-- Border colors-->
+<h1 style="border:2px solid Tomato;">Hello World</h1>
+<h1 style="border:2px solid DodgerBlue;">Hello World</h1>
+<h1 style="border:2px solid Violet;">Hello World</h1>
+
+<p style="border:8px solid violet;">Hello World</p>
+
+
+
+</body>
+</html>
