@@ -1,0 +1,209 @@
+/* 
+  CSS Variables (Custom Properties)
+  Define reusable values that can be used throughout the stylesheet
+  Accessed using var(--variable-name)
+*/
+:root {
+    --primary-color: #3498db; /* Main brand blue color */
+    --secondary-color: #2ecc71;  /* Accent green color */
+    --dark-color: #2c3e50;      /* Dark color for headers/footers */
+    --light-color: #ecf0f1;     /* Light background color */
+}
+
+/* 
+  Reset and Base Styles 
+  The asterisk (*) is a universal selector that applies to all elements
+*/
+* {
+    margin: 0;     /* Remove default margins */
+    padding: 0;    /* Remove default padding */
+    box-sizing: border-box; /* Include padding/border in element's total width/height */
+}
+
+/* 
+  Body Styles 
+  Sets default styles for the entire page
+*/
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font stack */
+    line-height: 1.6;  /* Space between lines of text */
+    color: #333;       /* Default text color */
+    background-color: #f9f9f9; /* Page background */
+}
+
+/* 
+  Header Styles 
+  Styles for the page header section
+*/
+header {
+    background-color: var(--dark-color); /* Using CSS variable */
+    color: white;                       /* Text color */
+    padding: 1rem;                      /* Internal spacing (1rem = 16px typically) */
+    text-align: center;                 /* Center align content */
+}
+
+/* 
+  Navigation Styles 
+  Styles for the navigation menu
+*/
+nav ul {
+    list-style-type: none;    /* Remove bullet points */
+    display: flex;            /* Make list items flex containers */
+    justify-content: center; /* Center items horizontally */
+    gap: 2rem;               /* Space between menu items */
+    margin-top: 1rem;        /* Space above the menu */
+}
+
+/* 
+  Navigation Link Styles 
+  Styles for the clickable menu items
+*/
+nav a {
+    color: white;             /* Link text color */
+    text-decoration: none;    /* Remove underline */
+    padding: 0.5rem 1rem;     /* Add clickable area around text */
+    border-radius: 4px;       /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth color change on hover */
+}
+
+/* 
+  Navigation Hover Effect 
+  Changes when mouse is over the link
+*/
+nav a:hover {
+    background-color: var(--primary-color); /* Change background on hover */
+}
+
+/* 
+  Box Model Section 
+  Demonstrates the CSS box model concept
+*/
+#box-model {
+    padding: 2rem;           /* Internal spacing */
+    margin: 2rem auto;       /* External spacing (auto centers horizontally) */
+    max-width: 800px;        /* Maximum width of the section */
+}
+
+/* 
+  Box Model Demonstration 
+  Shows margin, border, padding, and content
+*/
+.box {
+    width: 200px;                      /* Content width */
+    height: 100px;                     /* Content height */
+    padding: 20px;                     /* Space inside border */
+    border: 5px solid var(--primary-color); /* Visible border */
+    margin: 30px auto;                 /* Space outside border (auto centers) */
+    background-color: var(--light-color); /* Fill color */
+    text-align: center;                /* Center text horizontally */
+    line-height: 60px;                /* Center text vertically (approx.) */
+}
+
+/* 
+  Flexbox Section 
+  Container with flexbox layout
+*/
+#flexbox {
+    background-color: #e8f4f8; /* Light blue background */
+    padding: 2rem;            /* Internal spacing */
+    margin: 2rem 0;           /* External spacing */
+}
+
+/* 
+  Flex Container 
+  Parent element that holds flex items
+*/
+.flex-container {
+    display: flex;            /* Enable flexbox layout */
+    justify-content: space-around; /* Distribute space around items */
+    flex-wrap: wrap;          /* Allow items to wrap to next line */
+    gap: 1rem;               /* Space between items */
+    margin-top: 1rem;        /* Space above the container */
+}
+
+/* 
+  Flex Items 
+  Children elements within the flex container
+*/
+.flex-item {
+    background-color: var(--secondary-color); /* Green background */
+    color: white;              /* White text */
+    padding: 1rem;             /* Internal spacing */
+    border-radius: 5px;        /* Rounded corners */
+    flex: 1 1 200px;           /* flex-grow, flex-shrink, flex-basis */
+    text-align: center;        /* Center text */
+}
+
+/* 
+  Grid Section 
+  Container with CSS Grid layout
+*/
+#grid {
+    padding: 2rem;           /* Internal spacing */
+    margin: 2rem auto;       /* External spacing */
+    max-width: 800px;        /* Maximum width */
+}
+
+/* 
+  Grid Container 
+  Parent element that holds grid items
+*/
+.grid-container {
+    display: grid;                      /* Enable grid layout */
+    grid-template-columns: repeat(3, 1fr); /* 3 equal-width columns */
+    gap: 1rem;                         /* Space between grid items */
+    margin-top: 1rem;                  /* Space above the grid */
+}
+
+/* 
+  Grid Items 
+  Children elements within the grid container
+*/
+.grid-item {
+    background-color: var(--primary-color); /* Blue background */
+    color: white;              /* White text */
+    padding: 2rem;             /* Internal spacing */
+    text-align: center;        /* Center text */
+    border-radius: 5px;       /* Rounded corners */
+}
+
+/* 
+  Footer Styles 
+  Styles for the page footer
+*/
+footer {
+    background-color: var(--dark-color); /* Dark background */
+    color: white;              /* White text */
+    text-align: center;        /* Center content */
+    padding: 1rem;             /* Internal spacing */
+    margin-top: 2rem;          /* Space above footer */
+}
+
+/* 
+  Pseudo-classes Example 
+  Special styles for specific element states/positions
+*/
+.flex-item:nth-child(odd) {   /* Targets odd-numbered flex items */
+    transform: rotate(-5deg);  /* Slight rotation */
+}
+
+.flex-item:nth-child(even) {  /* Targets even-numbered flex items */
+    transform: rotate(5deg);   /* Opposite rotation */
+}
+
+/* 
+  Media Query for Responsive Design 
+  Adjusts layout when screen width is 600px or less
+*/
+@media (max-width: 600px) {
+    /* Change grid from 3 columns to 1 column */
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Stack navigation items vertically on small screens */
+    nav ul {
+        flex-direction: column; /* Stack items vertically */
+        gap: 0.5rem;           /* Reduce space between items */
+    }
+}
